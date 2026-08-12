@@ -7,12 +7,12 @@
     |_| |_||_||_|_| \__,_| |___/|_| \__,_|_|_||_| |_|\_\___\___/_||_|
 
   —— Third Brain Neon v1.0.0 (2026-08-12)
-  —— Structure: Sparkling Night v1.2.2 by Isax785, with Dylan's editor
+  —— Structure: Sparkling Night v1.2.2 by Isax785, with Narcosia's editor
      click/cursor fixes (padding-only spacing on CodeMirror lines — CM6
      ignores vertical margins on .cm-line when mapping clicks to text).
-  —— Palette: the A1 neon token set from the IAG town-hall deck
-     (iag-townhall-deck/index.html): cyan #22E0FF structure, magenta
-     #FF2EA6 punch, violet #8A5CFF support, deep violet-black grounds.
+  —— Palette: the author's neon presentation-deck tokens: cyan #22E0FF
+     structure, magenta #FF2EA6 punch, violet #8A5CFF support, deep
+     violet-black grounds.
 ------------------------------------------------------------------------- */
 
 :root {
@@ -601,9 +601,9 @@ a:hover,
   }
 
 /* ----------- Neon Room Background -----------
-   The dylan-terminal WezTerm wallpaper (1920w WebP, embedded as a data
-   URI — Obsidian themes are single-file). The gradient overlay darkens
-   it ~35%, matching WezTerm's brightness=0.65 treatment. Workspace
+   The author's AI-generated neon-room wallpaper (1920w WebP, embedded
+   as a data URI — Obsidian themes are single-file). The gradient overlay
+   darkens it ~35%, matching its terminal-background treatment. Workspace
    surfaces become tinted glass in the deck ground tones: raise/lower
    the rgba alphas below to trade neon glow against text contrast. */
 
