@@ -1,7 +1,8 @@
 {
    "name": "Third Brain Neon",
-   "version": "1.0.0",
+   "version": "1.0.1",
    "minAppVersion": "1.2.2",
    "author": "Narcosia",
-   "authorUrl": "https://github.com/Narcosia"
+   "authorUrl": "https://github.com/Narcosia",
+   "screenshot": "screenshot.png"
 }

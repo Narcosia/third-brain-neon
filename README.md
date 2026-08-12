@@ -30,9 +30,9 @@ All palette tokens live in the `:root` block at the top of `theme.css` (`--neon-
 
 ## Credits
 
-- Structure forked from [Sparkling Night](https://github.com/isax785/obsidian-sparkling-night) by Isacco Stiaccini (MIT).
-- File-explorer icons derived from [Lucide](https://lucide.dev) (ISC).
-- Background artwork: original AI-generated image by the theme author.
+- Structure forked from [Sparkling Night](https://github.com/isax785/obsidian-sparkling-night) by Isacco Stiaccini (MIT License).
+- File-explorer icons derived from [Lucide](https://lucide.dev) (ISC License, © Lucide Contributors).
+- Background artwork: original AI-generated image by the theme author, distributed under the repository's MIT terms.
 
 ## License
 
