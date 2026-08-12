@@ -6,8 +6,9 @@ A dark, neon cyan/magenta theme for [Obsidian](https://obsidian.md) — glass pa
 
 ## Screenshots
 
-<!-- screenshots incoming: images/hero.png (editor + sidebar), images/reading.png -->
-*Screenshots coming shortly.*
+![Editing in Third Brain Neon — glass panes over the neon room](images/hero.png)
+
+![Prose, blockquotes and open folders](images/extended-mind.png)
 
 ## Features
 
