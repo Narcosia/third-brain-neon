@@ -6,7 +6,7 @@
     | | | ' \ | | '_/ _` | | _ \| '_/ _` | | ' \  | .` / -_) _ \ ' \
     |_| |_||_||_|_| \__,_| |___/|_| \__,_|_|_||_| |_|\_\___\___/_||_|
 
-  —— Third Brain Neon v1.0.2 (2026-08-12)
+  —— Third Brain Neon v1.0.3 (2026-08-12)
   —— Structure: Sparkling Night v1.2.2 by Isax785, with Narcosia's editor
      click/cursor fixes (padding-only spacing on CodeMirror lines — CM6
      ignores vertical margins on .cm-line when mapping clicks to text).
@@ -431,6 +431,15 @@ u {
   padding-left: 0.3rem;
   padding-right: 0.3rem;
   border-radius: 0.2rem;
+}
+
+/* FIX: bold text and the highlight background are the same magenta, so
+   bold overlapping a highlight rendered magenta-on-magenta (invisible).
+   Inside a highlight, the dark highlight text colour must win. */
+.cm-s-obsidian span.cm-highlight.cm-strong,
+.markdown-rendered mark strong,
+.markdown-rendered strong mark {
+  color: var(--highlight-text-color) !important;
 }
 
 
