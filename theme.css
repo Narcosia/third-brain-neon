@@ -559,7 +559,7 @@ a:hover,
 
 /* Files: magenta Lucide file glyph (was the 📄 emoji, which ignores
    theme colours; also was scoped so root-level files had no icon). */
-.nav-file-title-content::before
+.nav-file-title-content:not(.mk-tree-text)::before
 {
     content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='15' height='15'><g fill='none' stroke='%23FF2EA6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/><path d='M15 2v5h5'/></g></svg>");
     margin-right: 6px;
@@ -581,14 +581,30 @@ a:hover,
 
 /* Collapsed folders: cyan Lucide folder glyph (same icon family as the
    file + open-folder glyphs; recolour via the %23 hex values) */
-.nav-folder-title-content::before {
+.nav-folder-title-content:not(.mk-tree-text)::before {
     content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'><path fill='none' stroke='%2322E0FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/></svg>");
     margin-right: 7px !important;
   }
 
 /* Expanded folders: violet open-folder glyph so open branches stand out */
-.nav-folder:not(.is-collapsed):not(.mod-root) > .nav-folder-title > .nav-folder-title-content::before {
+.nav-folder:not(.is-collapsed):not(.mod-root) > .nav-folder-title > .nav-folder-title-content:not(.mk-tree-text)::before {
     content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'><path fill='none' stroke='%238A5CFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2'/></svg>");
+  }
+
+/* MAKE.MD navigator: its rows reuse the nav-*-title-content classes but
+   draw their own sticker icon, so the glyphs above are skipped there
+   (:not(.mk-tree-text)) and the sticker is recoloured instead. Rows with a
+   user-set MAKE.MD label colour keep MAKE.MD's own styling. */
+.mk-tree-wrapper:not([style*="--label-color"]) .nav-file-title > .mk-path-icon svg {
+    --icon-color: #FF2EA6;
+  }
+
+.mk-tree-wrapper:not([style*="--label-color"]) .nav-folder-title > .mk-path-icon svg {
+    --icon-color: #22E0FF;
+  }
+
+.mk-tree-wrapper:not([style*="--label-color"]) .nav-folder-title > .mk-collapse:not(.mk-collapsed) + .mk-path-icon svg {
+    --icon-color: #8A5CFF;
   }
 
 /* ----------- Progress Bar Loading ----------- */
